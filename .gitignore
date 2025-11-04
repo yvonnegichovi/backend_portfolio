@@ -1,2 +1,3 @@
 .gitignore
 .qodo
+node_modules/
