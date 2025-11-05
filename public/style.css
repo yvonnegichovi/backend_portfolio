@@ -327,3 +327,187 @@ header a{
         font-size: 30px;
     }
 }
+
+/* =======================================
+   Responsive Fix: Thumbnails at Bottom,
+   Arrows Above Them, Clean Scaling
+======================================= */
+
+@media screen and (max-width: 1024px) {
+  .carousel .list .item .content {
+    top: 45%;
+    max-width: 90%;
+    padding-right: 0;
+  }
+
+  .carousel .list .item .title {
+    font-size: 2.5em;
+  }
+
+  .carousel .list .item .topic {
+    font-size: 1.5em;
+  }
+
+  .carousel .list .item .buttons {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .thumbnail {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 12px;
+    box-sizing: border-box;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  }
+
+  .thumbnail .item {
+    width: 120px;
+    height: 160px;
+    flex-shrink: 0;
+  }
+
+  .arrows {
+    position: absolute;
+    bottom: 190px;
+    right: 50%;
+    transform: translateX(50%);
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    z-index: 100;
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header a {
+    margin: 6px;
+    font-size: 12px;
+  }
+
+  .carousel .list .item .content {
+    top: 12%;
+    max-width: 90%;
+    padding-right: 0;
+  }
+
+  .carousel .list .item .title {
+    font-size: 1.8em;
+  }
+
+  .carousel .list .item .topic {
+    font-size: 1.2em;
+  }
+
+  .carousel .list .item .des p {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .carousel .list .item .buttons {
+    grid-template-columns: 1fr;
+    width: 70%;
+    margin-top: 10px;
+  }
+
+  .arrows {
+    position: absolute;
+    bottom: 180px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    z-index: 150;
+  }
+
+  .arrows button {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .thumbnail {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 10px;
+    overflow-x: auto;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  }
+
+  .thumbnail .item {
+    width: 90px;
+    height: 130px;
+    flex-shrink: 0;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .carousel .list .item .content {
+      top: 35%;
+      max-width: 95%;
+      padding-right: 0;
+      margin-top: 20px;
+  }
+  .carousel .list .item .title {
+    font-size: 1.5em;
+  }
+
+  .carousel .list .item .topic {
+    font-size: 1em;
+  }
+
+  .carousel .list .item .buttons {
+    width: 100%;
+    display: grid;
+  }
+
+  .thumbnail {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 4px;
+    box-sizing: border-box;
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  }
+
+  .thumbnail .item {
+    flex: 1;
+    width: 60%;
+    aspect-ratio: 3 / 4;
+    margin: 0 2px;
+    overflow: hidden;
+    border-radius: 8px;
+    font-size: xx-small;
+  }
+
+  .thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .arrows {
+    bottom: 170px;
+  }
+}

@@ -20,11 +20,11 @@
 
 | Project                  | Tech Stack                           | Highlights                            | Repo           |
 | ------------------------ | ------------------------------------ | ------------------------------------- | -------------- |
-| **E-Commerce API**       | FastAPI + PostgreSQL + Redis         | Auth, orders, caching, Swagger docs   | [Repo Link](#) |
+| **E-Commerce API**       | FastAPI + PostgreSQL + Redis         | Auth, orders, caching, Swagger docs   | https://github.com/yvonnegichovi/e-commerce-project |
 | **Content Management System** | Django + PostgreSQL | Auth, CRUD | https://github.com/yvonnegichovi/cms_api
-| **Ride-Hailing Backend** | Node.js + Postgres + Redis Pub/Sub   | Real-time tracking, payments          | [Repo Link](#) |
-| **Analytics Dashboard**  | Django + PostgreSQL + Celery + Redis | Async jobs, charts, auth              | [Repo Link](#) |
-| **Chat System**          | Node.js + Redis                      | WebSockets, scalable pub/sub          | [Repo Link](#) |
+| **Ride-Hailing Backend** | Node.js + Postgres + Redis Pub/Sub   | Real-time tracking, payments          | https://github.com/yvonnegichovi/ride-hailing-project |
+| **Analytics Dashboard**  | Django + PostgreSQL + Celery + Redis | Async jobs, charts, auth              | https://github.com/yvonnegichovi/analytics-dashboard |
+| **Chat System**          | Node.js + Redis                      | WebSockets, scalable pub/sub          | https://github.com/yvonnegichovi/chat-system-project |
 | **Recommendation API**   | FastAPI + Postgres ML + Redis        | Personalization with window functions | [Repo Link](#) |
 
 *(Each repo should have its own polished README with setup instructions, diagrams, and screenshots.)*
