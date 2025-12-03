@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowDown, Github, LinkedIn, Mail } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import image from "@/assets/image.png";
 
 const Hero = () => {
@@ -50,7 +50,7 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex gap-6 justify-center animate-fade-in-delay">
             <a
-              href="https://github.com"
+              href="https://github.com/yvonnegichovi"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -58,7 +58,7 @@ const Hero = () => {
               <Github className="w-6 h-6" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/yvonne-gichovi-2b0753223/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
