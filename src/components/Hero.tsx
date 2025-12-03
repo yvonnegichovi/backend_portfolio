@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import { Card } from "@/components/ui/card";
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import image from "@/assets/image.png";
 
@@ -6,6 +7,33 @@ const Hero = () => {
     const scrollToSection = (id: string) => {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     };
+
+    const highlights = [
+        {
+            title: "Programming",
+        },
+        {
+            title: "DSA",
+        },
+        {
+            title: "Version Control",
+        },
+        {
+            title: "Testing & Debugging",
+        },
+        {
+            title: "Agile Methodologies",
+        },
+        {
+            title: "Problem Solving",
+        },
+        {
+            title: "Software Security",
+        },
+        {
+            title: "System Design",
+        }
+    ];  
 
     return (
         <section
@@ -25,8 +53,21 @@ const Hero = () => {
             Software Engineer
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto font-light">
-            Building innovative solutions with modern technologies
+            Every system engineered to perfection, one line of code at a time
           </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12 max-w-3xl mx-auto">
+            {highlights.map((item, index) => (
+              <Card
+                key={index}
+                className="p-6 bg-card border-border hover-glow card-glow"
+              >
+                <div className="text-center">
+                  <h3 className="font-semibold text-[14px]">{item.title}</h3>
+                </div>
+              </Card>
+            ))}
+          </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 justify-center mb-12 animate-fade-in-delay">
@@ -66,7 +107,7 @@ const Hero = () => {
               <Linkedin className="w-6 h-6" />
             </a>
             <a
-              href="mailto:contact@example.com"
+              href="mailto:yvonnegichovi@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Mail className="w-6 h-6" />

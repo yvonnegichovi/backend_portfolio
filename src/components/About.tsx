@@ -32,7 +32,9 @@ const About = () => {
             <p className="text-lg text-muted-foreground leading-relaxed">
               Passionate software engineer with expertise in building scalable web applications 
               and solving complex technical challenges. I thrive on turning innovative ideas into 
-              reality through clean, efficient code.
+              reality through clean, efficient code. Comes with a strong background in full-stack 
+              development, database management, and cloud technologies, skills acquired as a co-founder 
+              of a tech startup called SuiviParcel
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               With a strong foundation in modern development practices and a commitment to 
