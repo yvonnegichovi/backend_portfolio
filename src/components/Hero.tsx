@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button';
-import { Card } from "@/components/ui/card";
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import image from "@/assets/image.png";
 
@@ -11,7 +10,7 @@ const Hero = () => {
     return (
         <section
         id="hero"
-        className="relative min-h screen flex items-center justify-center overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
       >
         <div
             className='absolute inset-0 bg-cover bg-center opacity-20'
