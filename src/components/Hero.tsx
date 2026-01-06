@@ -24,8 +24,11 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-gradient glow-text">
             Software Engineer
           </h1>
+          <p className="text-xl md:text-4xl text-muted-foreground mb-8 max-w-2xl mx-auto font-heavy">
+            Yvonne Gichovi
+          </p>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto font-light">
-            Every system engineered to perfection, one line of code at a time
+            Hit me up for collaborations or just a friendly chat!
           </p>
 
           {/* CTA Buttons */}

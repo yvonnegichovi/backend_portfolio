@@ -5,18 +5,24 @@ const About = () => {
     const highlights = [
         {
             icon: Code2,
-            title: "Clean Code",
-            description: "I write clean, maintainable code following best practices and design patterns."
+            title: "Production-ready Code",
+            description: "I build scalable, maintainable systems using proven patterns—so your product is easy to extend, debug, and grow."
         },
         {
             icon: Rocket,
-            title: "Fast Learner",
-            description: "I quickly adapt to new technologies and frameworks to stay ahead in the industry."
+            title: "Fast Executioner",
+            description: "I turn ideas into working features quickly, helping startups and teams ship MVPs without unnecessary delays."
         },
         {
             icon: Users,
-            title: "Team Player",
-            description: "I collaborate effectively with cross-functional teams to deliver high-quality software."
+            title: "Clear Collaboration",
+            description: "I communicate clearly, ask the right questions early, and take ownership—so projects move forward smoothly."
+        },
+        {
+            icon: Rocket,
+            title: "From Idea to MVP",
+            description:
+                "I help founders turn ideas into working products with Django, Flask, FastAPI, and React, and PostgreSQL built to launch and iterate fast."
         },
     ];
 
