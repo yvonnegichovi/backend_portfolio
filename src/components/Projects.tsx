@@ -8,7 +8,7 @@ const Projects = () => {
         {
             title: "Content Management System",
             description:
-                "A web application for managing digital content, allowing users to create, edit, and organize content efficiently.",
+                "A backend-driven CMS that enables teams to create, manage, and organize digital content efficiently, with a focus on clean APIs, role-based access, and scalability.",
             tech: ["Python", "Django", "PostgreSQL"],
             github: "https://github.com/yvonnegichovi/cms_api",
             demo:"#"
@@ -16,7 +16,7 @@ const Projects = () => {
         {
             title: "E-commerce Platform",
             description:
-                "A scalable e-commerce platform with features like product listings, shopping cart, and payment integration.",
+                "A scalable e-commerce backend supporting product management, cart workflows, and payment processing, designed to handle growing catalogs and user traffic.",
             tech: ["Node.js", "Express", "MongoDB"],
             github: "https://github.com/yvonnegichovi/e-commerce-project",
             demo:"#"
@@ -24,7 +24,7 @@ const Projects = () => {
         {
             title: "Ride-Hailing Backend",
             description:
-                "A backend system for a ride-hailing service, handling ride requests, driver assignments, and real-time tracking and payments.",
+                "A high-performance backend system for a ride-hailing service, handling ride matching, driver assignment, real-time updates, and payment flows.",
             tech: ["Node.js", "PostgreSQL", "Redis"],
             github: "https://github.com/yvonnegichovi/ride-hailing-project",
             demo:"#"
@@ -32,7 +32,7 @@ const Projects = () => {
         {
             title: "Analytics Dashboard",
             description:
-                "A dashboard application that visualizes data analytics and provides insights through interactive charts and graphs.",
+                "A data analytics platform that processes background jobs and visualizes key metrics through interactive dashboards for faster, data-driven decisions.",
             tech: ["Django", "PostgreSQL", "Celery", "Redis"],
             github: "https://github.com/yvonnegichovi/analytics-dashboard",
             demo:"#"
@@ -40,7 +40,7 @@ const Projects = () => {
         {
             title: "Chat System",
             description:
-                "A real-time chat application with features like private messaging, group chats, and message history.",
+                "A real-time messaging system supporting private and group chats with persistent message history and low-latency communication.",
             tech: ["Node.js", "Socket.io", "MongoDB"],
             github: "https://github.com/yvonnegichovi/chat-system-project",
             demo:"#"
@@ -48,7 +48,7 @@ const Projects = () => {
         {
             title: "Recommendation API",
             description:
-                "An API that provides personalized recommendations based on user behavior and preferences.",
+                "A RESTful API that delivers personalized recommendations based on user behavior, designed for easy integration into existing products.",
             tech: ["Python", "FastAPI", "PostgreSQL"],
             github: "#",
             demo:"#"

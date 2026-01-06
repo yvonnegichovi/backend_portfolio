@@ -36,15 +36,23 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Passionate software engineer with expertise in building scalable web applications 
-              and solving complex technical challenges. I thrive on turning innovative ideas into 
-              reality through clean, efficient code. Comes with a strong background in full-stack 
-              development, database management, and cloud technologies, skills acquired as a co-founder 
-              of a tech startup called SuiviParcel
+              I’m a full-stack developer specializing in building MVPs and scalable web applications
+              using Django, FastAPI, React, and PostgreSQL. I help startups and growing businesses
+              turn ideas into reliable products that are ready to launch and iterate.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              With a strong foundation in modern development practices and a commitment to 
-              continuous learning, I deliver high-quality solutions that make a difference.
+              As a co-founder of a tech startup,{" "}
+              <a
+                href="https://suiviparcel.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground font-medium underline underline-offset-4 hover:text-primary transition-colors"
+              >
+                SuiviParcel
+              </a>
+              , I’ve worked hands-on with real-world systems—designing APIs, managing databases,
+              and shipping features under real business constraints. I focus on clean architecture,
+              clear communication, and delivering solutions that last beyond the first release.
             </p>
           </div>
 
