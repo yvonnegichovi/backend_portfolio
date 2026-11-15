@@ -1,6 +1,9 @@
 import { Button } from '@/components/ui/button';
 import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 import image from "@/assets/image.png";
+import { CVButton } from "@/components/CVModal";
+
+const stack = ["Python", "Django", "FastAPI", "React", "Next.js", "TypeScript", "Celery", "PostgreSQL", "Docker", "Azure & AWS"];
 
 const Hero = () => {
     const scrollToSection = (id: string) => {
@@ -21,14 +24,22 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="animate-fade-in">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-gradient glow-text">
-            Software Engineer
+          <span className="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-primary/40 bg-primary/10 text-sm text-foreground">
+            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" aria-hidden />
+            Open to collaborations &amp; team roles
+          </span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-gradient glow-text">
+            Full-Stack Software Engineer
           </h1>
-          <p className="text-xl md:text-4xl text-muted-foreground mb-8 max-w-2xl mx-auto font-heavy">
+          <p className="text-xl md:text-4xl text-muted-foreground mb-6 max-w-2xl mx-auto font-heavy">
             Yvonne Gichovi
           </p>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto font-light">
-            Hit me up for collaborations or just a friendly chat!
+          <p className="text-lg md:text-2xl text-muted-foreground mb-6 max-w-3xl mx-auto font-light">
+            I take products from MVP to production: polished React and Next.js
+            frontends on top of reliable Python backends.
+          </p>
+          <p className="text-sm md:text-base text-muted-foreground/80 mb-10 max-w-3xl mx-auto">
+            {stack.join(" · ")}
           </p>
 
           {/* CTA Buttons */}
@@ -48,6 +59,11 @@ const Hero = () => {
             >
               Contact Me
             </Button>
+            <CVButton
+              size="lg"
+              variant="outline"
+              className="border-primary text-foreground hover:bg-primary/10 font-semibold px-8"
+            />
           </div>
 
           {/* Social Links */}
@@ -64,6 +80,7 @@ const Hero = () => {
               href="https://www.linkedin.com/in/yvonne-gichovi-2b0753223/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Linkedin className="w-6 h-6" />

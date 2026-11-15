@@ -8,43 +8,43 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 260 60% 5%;
-    --foreground: 270 20% 95%;
+    --background: 270 40% 98%;
+    --foreground: 265 40% 12%;
 
-    --card: 260 50% 8%;
-    --card-foreground: 270 20% 95%;
+    --card: 0 0% 100%;
+    --card-foreground: 265 40% 12%;
 
-    --popover: 260 50% 8%;
-    --popover-foreground: 270 20% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 265 40% 12%;
 
-    --primary: 270 80% 65%;
-    --primary-foreground: 270 20% 10%;
+    --primary: 270 70% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 260 40% 15%;
-    --secondary-foreground: 270 20% 95%;
+    --secondary: 270 45% 95%;
+    --secondary-foreground: 265 40% 15%;
 
-    --muted: 260 40% 15%;
-    --muted-foreground: 270 15% 60%;
+    --muted: 270 30% 94%;
+    --muted-foreground: 265 12% 38%;
 
-    --accent: 280 85% 70%;
-    --accent-foreground: 270 20% 10%;
+    --accent: 290 70% 52%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 70% 55%;
-    --destructive-foreground: 270 20% 95%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 260 30% 20%;
-    --input: 260 30% 20%;
-    --ring: 270 80% 65%;
+    --border: 270 25% 87%;
+    --input: 270 25% 87%;
+    --ring: 270 70% 50%;
 
     --radius: 0.75rem;
 
     /* Custom portfolio colors */
-    --purple-glow: 270 100% 70%;
+    --purple-glow: 270 90% 65%;
     --purple-dark: 270 60% 25%;
-    --gradient-primary: linear-gradient(135deg, hsl(270 80% 65%), hsl(290 85% 70%));
-    --gradient-secondary: linear-gradient(180deg, hsl(260 60% 5%), hsl(270 50% 10%));
-    --shadow-glow: 0 0 40px hsl(270 100% 70% / 0.3);
-    --shadow-card: 0 10px 30px -10px hsl(270 80% 30% / 0.4);
+    --gradient-primary: linear-gradient(135deg, hsl(270 70% 50%), hsl(290 70% 52%));
+    --gradient-secondary: linear-gradient(180deg, hsl(270 40% 98%), hsl(270 45% 95%));
+    --shadow-glow: 0 12px 32px -8px hsl(270 70% 50% / 0.3);
+    --shadow-card: 0 10px 30px -12px hsl(270 50% 40% / 0.18);
   }
 }
 
@@ -68,7 +68,7 @@ All colors MUST be HSL.
   }
 
   .glow-text {
-    text-shadow: 0 0 20px hsl(var(--purple-glow) / 0.5);
+    text-shadow: 0 0 24px hsl(var(--purple-glow) / 0.25);
   }
 
   .card-glow {
@@ -82,6 +82,28 @@ All colors MUST be HSL.
   .hover-glow:hover {
     box-shadow: var(--shadow-glow);
     transform: translateY(-4px);
+  }
+
+  /* Cards: rise up and grow on hover. Wide cards can set --lift-scale lower. */
+  .hover-lift {
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+    will-change: transform;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-8px) scale(var(--lift-scale, 1.04));
+    box-shadow: 0 24px 48px -16px hsl(270 70% 45% / 0.35);
+    border-color: hsl(var(--primary) / 0.4);
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hover-lift,
+    .hover-lift:hover {
+      transition: none;
+      transform: none;
+    }
   }
 }
 

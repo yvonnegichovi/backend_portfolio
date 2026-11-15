@@ -56,13 +56,14 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm always interested in hearing about new projects and opportunities. 
-              Whether you have a question or just want to say hi, feel free to reach out!
+              I'm open to collaborations and to joining a team. I love taking a project
+              from an MVP all the way to a full implementation in production. If you're
+              building something, or your team needs a full-stack engineer, let's talk!
             </p>
 
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
-                <Card key={index} className="p-6 bg-card border-border">
+                <Card key={index} className="p-6 bg-card border-border card-glow hover-lift">
                   <div className="flex items-center gap-4">
                     <div className="p-3 rounded-lg bg-primary/10">
                       <info.icon className="w-5 h-5 text-primary" />
