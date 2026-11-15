@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import { SectionScrollCue } from "@/components/ScrollCue";
 import { Cloud, Code2, Database, Monitor, Server, ShieldCheck } from "lucide-react";
 
 const skillCategories = [
@@ -93,6 +94,7 @@ const Skills = () => {
                         </div>
                     ))}
                 </div>
+                <SectionScrollCue to="experience" label="Experience" />
             </div>
         </section>
     );

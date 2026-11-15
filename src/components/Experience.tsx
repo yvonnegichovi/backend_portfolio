@@ -1,5 +1,8 @@
 import { Card } from "@/components/ui/card";
+import { SectionScrollCue } from "@/components/ScrollCue";
 import { CVButton } from "@/components/CVModal";
+import { DrawBorder, DrawLine } from "@/components/DrawPath";
+import { motion } from "framer-motion";
 
 type Job = {
     role: string;
@@ -69,14 +72,20 @@ const Experience = () => {
                     Experience
                 </h2>
 
-                <ol className="relative border-l border-primary/30 ml-2 space-y-10">
-                    {jobs.map((job) => (
+                <ol className="relative ml-2 space-y-10">
+                    <DrawLine className="absolute left-0 top-0 h-full w-[2px] -translate-x-1/2" />
+                    {jobs.map((job, index) => (
                         <li key={`${job.org}-${job.role}`} className="pl-8 relative">
-                            <span
+                            <motion.span
                                 aria-hidden
-                                className="absolute -left-[7px] top-8 w-3 h-3 rounded-full bg-primary shadow-[0_0_12px_hsl(var(--primary))]"
+                                className="absolute -left-[6px] top-8 w-3 h-3 rounded-full bg-primary shadow-[0_0_12px_hsl(var(--primary))]"
+                                initial={{ scale: 0 }}
+                                whileInView={{ scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ type: "spring", stiffness: 300, damping: 15, delay: 0.3 + index * 0.15 }}
                             />
-                            <Card className="p-6 md:p-8 bg-card border-border card-glow hover-lift [--lift-scale:1.02]">
+                            <Card className="relative p-6 md:p-8 bg-card border-border card-glow hover-lift [--lift-scale:1.02]">
+                                <DrawBorder delay={index * 0.15} />
                                 <div className="flex flex-col md:flex-row md:items-baseline md:justify-between gap-1 md:gap-4 mb-1">
                                     <h3 className="text-xl font-bold">{job.role}</h3>
                                     <span className="text-sm text-muted-foreground whitespace-nowrap">{job.dates}</span>
@@ -118,6 +127,7 @@ const Experience = () => {
                         label="See full CV"
                     />
                 </div>
+                <SectionScrollCue to="projects" label="Projects" />
             </div>
         </section>
     );

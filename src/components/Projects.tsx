@@ -1,5 +1,7 @@
 import { Card } from "@/components/ui/card";
+import { SectionScrollCue } from "@/components/ScrollCue";
 import { Button } from "@/components/ui/button";
+import { DrawBorder } from "@/components/DrawPath";
 import { BookOpen, ExternalLink, Github, Globe, Server } from "lucide-react";
 
 type ProjectLink = { label: string; url: string };
@@ -114,10 +116,11 @@ const Projects = () => {
                     {projects.map((project) => (
                         <Card
                             key={project.title}
-                            className={`p-8 bg-card border-border card-glow hover-lift [--lift-scale:1.02] group flex flex-col ${
+                            className={`relative p-8 bg-card border-border card-glow hover-lift [--lift-scale:1.02] group flex flex-col ${
                                 project.featured ? "md:col-span-2" : ""
                             }`}
                         >
+                            {project.featured && <DrawBorder />}
                             <div className="flex flex-wrap items-center gap-3 mb-4">
                                 <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">
                                     {project.title}
@@ -223,6 +226,7 @@ const Projects = () => {
                         </Card>
                     ))}
                 </div>
+                <SectionScrollCue to="contact" label="Contact" />
             </div>
         </section>
     );

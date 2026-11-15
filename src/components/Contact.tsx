@@ -16,7 +16,6 @@ const Contact = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Here you would typically handle form submission, e.g., send data to an API
         toast({
             title: "Message Sent!",
             description: "Thank you for reaching out! I'll get back to you soon.",

@@ -1,6 +1,7 @@
-import { Card } from "@/components/ui/card";
 import { Layers, Rocket, ShieldCheck, Users } from "lucide-react";
+import { SectionScrollCue } from "@/components/ScrollCue";
 import { CVButton } from "@/components/CVModal";
+import HighlightsStack, { type Highlight } from "@/components/HighlightsStack";
 
 const stats = [
     { value: "100k+", label: "notifications and reports processed a month" },
@@ -9,7 +10,7 @@ const stats = [
     { value: "3", label: "live production systems across three countries" },
 ];
 
-const highlights = [
+const highlights: Highlight[] = [
     {
         icon: Layers,
         title: "End-to-End Ownership",
@@ -44,7 +45,7 @@ const About = () => {
                     About Me
                 </h2>
 
-                <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+                <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
                     <div className="space-y-6">
                         <p className="text-lg text-muted-foreground leading-relaxed">
                             I’m a full-stack software engineer who builds production web applications end
@@ -78,24 +79,7 @@ const About = () => {
                         />
                     </div>
 
-                    <div className="grid gap-6">
-                        {highlights.map((item) => (
-                            <Card
-                                key={item.title}
-                                className="p-6 bg-card border-border card-glow hover-lift"
-                            >
-                                <div className="flex items-start gap-4">
-                                    <div className="p-3 rounded-lg bg-primary/10">
-                                        <item.icon className="w-6 h-6 text-primary" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-                                        <p className="text-muted-foreground">{item.description}</p>
-                                    </div>
-                                </div>
-                            </Card>
-                        ))}
-                    </div>
+                    <HighlightsStack items={highlights} />
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -109,6 +93,7 @@ const About = () => {
                         </div>
                     ))}
                 </div>
+                <SectionScrollCue to="skills" label="Skills" />
             </div>
         </section>
     );

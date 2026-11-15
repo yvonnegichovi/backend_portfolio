@@ -1,7 +1,8 @@
 import { Button } from '@/components/ui/button';
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import image from "@/assets/image.png";
 import { CVButton } from "@/components/CVModal";
+import ScrollCue from "@/components/ScrollCue";
 
 const stack = ["Python", "Django", "FastAPI", "React", "Next.js", "TypeScript", "Celery", "PostgreSQL", "Docker", "Azure & AWS"];
 
@@ -28,7 +29,7 @@ const Hero = () => {
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" aria-hidden />
             Open to collaborations &amp; team roles
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-gradient glow-text">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.15] pb-3 mb-6 text-gradient glow-text">
             Full-Stack Software Engineer
           </h1>
           <p className="text-xl md:text-4xl text-muted-foreground mb-6 max-w-2xl mx-auto font-heavy">
@@ -38,9 +39,22 @@ const Hero = () => {
             I take products from MVP to production: polished React and Next.js
             frontends on top of reliable Python backends.
           </p>
-          <p className="text-sm md:text-base text-muted-foreground/80 mb-10 max-w-3xl mx-auto">
-            {stack.join(" · ")}
-          </p>
+          {/* Tech stack: scrolls right to left in an endless loop */}
+          <div className="marquee mb-10 max-w-3xl mx-auto">
+            <p className="sr-only">{stack.join(", ")}</p>
+            <div className="marquee-track" aria-hidden>
+              {[0, 1].map((copy) => (
+                <ul key={copy} className="marquee-group">
+                  {stack.map((tech) => (
+                    <li key={tech} className="text-sm md:text-base text-muted-foreground/80 whitespace-nowrap">
+                      {tech}
+                      <span className="mx-3 text-primary/60">·</span>
+                    </li>
+                  ))}
+                </ul>
+              ))}
+            </div>
+          </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 justify-center mb-12 animate-fade-in-delay">
@@ -96,12 +110,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <button
-        onClick={() => scrollToSection("about")}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-primary transition-colors animate-bounce"
-      >
-        <ArrowDown className="w-8 h-8" />
-      </button>
+      <ScrollCue to="about" label="About" className="absolute bottom-8 left-1/2 -translate-x-1/2" />
     </section>
   );
 };
